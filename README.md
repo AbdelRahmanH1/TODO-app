@@ -25,8 +25,7 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
 2. Install dependencies:
    ```bash
    cd todo-app
- ```bash
-npm install
+   npm install
 
 3. Create a `.env` file in the root directory and configure environment variables:
 
