@@ -22,3 +22,17 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
 
    ```bash
    git clone https://github.com/your-username/todo-app.git
+
+Usage
+User Authentication:
+Register a new user: Send a POST request to /api/auth/register with username and password in the request body.
+Log in: Send a POST request to /api/auth/login with username and password in the request body. This will return a JWT token.
+Edit user account: Send a PUT request to /api/users/:id with the updated user details in the request body. You need to be authenticated and authorized to edit your own account.
+Delete user account: Send a DELETE request to /api/users/:id. You need to be authenticated and authorized to delete your own account.
+Task Management:
+Create a task: Send a POST request to /api/tasks with title and optional description and deadline in the request body. You need to be authenticated to create a task.
+Update a task: Send a PUT request to /api/tasks/:id with the updated task details in the request body. You need to be authenticated and authorized to edit your own tasks.
+Delete a task: Send a DELETE request to /api/tasks/:id. You need to be authenticated and authorized to delete your own tasks.
+Get all tasks: Send a GET request to /api/tasks. You need to be authenticated to retrieve your tasks.
+Get a specific task: Send a GET request to /api/tasks/:id. You need to be authenticated and authorized to access your own tasks.
+Mark a task as completed: Send a PUT request to /api/tasks/:id/complete. You need to be authenticated and authorized to mark your own tasks as completed.
