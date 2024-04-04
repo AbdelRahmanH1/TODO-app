@@ -28,10 +28,46 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
    npm install
 
 3. Create a `.env` file in the root directory and configure environment variables:
-```bash
-  PORT=3000
-  DB_USERNAME=your_database_username
-  DB_PASSWORD=your_database_password
-  DB_NAME=todo_db
-  JWT_SECRET=your_jwt_secret
+   ```bash
+    PORT=3000
+    DATABASE_NAME=your_database_username
+    DATABASE_PASS=your_database_password
+    DATABASE_USER= todo_db
+    JWT_SECRET=your_jwt_secret
+    SALT_ROUND = number_salt
+   Barrer_KEY= your_barrer_key
+
+4. Run the application:
+   ```bash
+       npm run dev
+5. Access the application in your web browser at `http://localhost:3000`.
+
+## Usage
+
+- **User Authentication:**
+- Register a new user: Send a `POST` request to `/api/auth/register` with `username` and `password` in the request body.
+- Log in: Send a `POST` request to `/api/auth/login` with `username` and `password` in the request body. This will return a JWT token.
+- Edit user account: Send a `PUT` request to `/api/users/:id` with the updated user details in the request body. You need to be authenticated and authorized to edit your own account.
+- Delete user account: Send a `DELETE` request to `/api/users/:id`. You need to be authenticated and authorized to delete your own account.
+- **Task Management:**
+- Create a task: Send a `POST` request to `/api/tasks` with `title` and optional `description` and `deadline` in the request body. You need to be authenticated to create a task.
+- Update a task: Send a `PUT` request to `/api/tasks/:id` with the updated task details in the request body. You need to be authenticated and authorized to edit your own tasks.
+- Delete a task: Send a `DELETE` request to `/api/tasks/:id`. You need to be authenticated and authorized to delete your own tasks.
+- Get all tasks: Send a `GET` request to `/api/tasks`. You need to be authenticated to retrieve your tasks.
+- Get a specific task: Send a `GET` request to `/api/tasks/:id`. You need to be authenticated and authorized to access your own tasks.
+- Mark a task as completed: Send a `PUT` request to `/api/tasks/:id/complete`. You need to be authenticated and authorized to mark your own tasks as completed.
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository, create pull requests, and open issues.
+
+## License
+
+This project is licensed under the MIT License.
+
+
+
+
+
+
 
