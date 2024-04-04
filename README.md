@@ -28,4 +28,10 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
    npm install
 
 3. Create a `.env` file in the root directory and configure environment variables:
+```bash
+PORT=3000
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+DB_NAME=todo_db
+JWT_SECRET=your_jwt_secret
 
