@@ -1,5 +1,5 @@
-import Task from "../../DB/models/task.model.js";
-import User from "../../DB/models/user.model.js";
+import Task from "../../../DB/models/task.model.js";
+import User from "../../../DB/models/user.model.js";
 import asyncHandler from "../../utils/asyncHandler.js";
 
 const createTask = asyncHandler(async (req, res, next) => {

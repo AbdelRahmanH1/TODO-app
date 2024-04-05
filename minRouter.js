@@ -1,6 +1,6 @@
 import { Router } from "express";
-import taskRouter from "./modules/task/task.router.js";
-import userRouter from "./modules/user/user.router.js";
+import taskRouter from "./src/modules/task/task.router.js";
+import userRouter from "./src/modules/user/user.router.js";
 
 const mainRouter = Router();
 

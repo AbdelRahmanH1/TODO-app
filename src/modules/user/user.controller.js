@@ -1,7 +1,7 @@
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
-import Token from "../../DB/models/token.model.js";
-import User from "../../DB/models/user.model.js";
+import Token from "../../../DB/models/token.model.js";
+import User from "../../../DB/models/user.model.js";
 import asyncHandler from "../../utils/asyncHandler.js";
 
 const createAccount = asyncHandler(async (req, res, next) => {

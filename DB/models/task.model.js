@@ -19,10 +19,6 @@ const TaskModel = sequelize.define(
       defaultValue: false,
       allowNull: true,
     },
-    deadline: {
-      type: DataTypes.DATE,
-      allowNull: true,
-    },
   },
   {
     indexes: [

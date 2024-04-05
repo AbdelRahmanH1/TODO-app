@@ -1,9 +1,8 @@
 import "dotenv/config.js";
 import express from "express";
-import { connectDB } from "./DB/connectDB.js";
-import mainRouter from "./minRouter.js";
+import { connectDB } from "../DB/connectDB.js";
+import mainRouter from "../minRouter.js";
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 await connectDB();
@@ -22,4 +21,4 @@ app.use((err, req, res, next) => {
     .json({ success: false, message, stack: err.stack });
 });
 
-app.listen(PORT, () => console.log(`Server start at port ${PORT}`));
+export default app;
