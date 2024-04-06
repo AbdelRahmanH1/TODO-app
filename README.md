@@ -47,9 +47,9 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
    ```
 
 4. Run the application:
-   ```bash
-       npm run dev
-   ```
+       ```bash
+           npm run dev
+   
 5. Access the application in your web browser at `http://localhost:3000`.
 
 ## Usage
@@ -67,6 +67,7 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
 - Get a specific task: Send a `GET` request to `/v1/tasks/:id`. You need to be authenticated and authorized to access your own tasks.
 - Mark a task as completed: Send a `PATCH` request to `/api/tasks/complete/:id`. You need to be authenticated and authorized to mark your own tasks as completed.
 
+
 ## Testing
 
 Testing is an essential part of the development process as it helps ensure the reliability and correctness of the application.
@@ -76,13 +77,14 @@ Testing is an essential part of the development process as it helps ensure the r
 This project uses Jest as the testing framework for unit and integration tests with superTest .
 
 ### To install Jest, run:
-
-    ```bash
-         npm install --save-dev jest
+ ```bash
+     bpm install jest --save-dev
+ ```
 
 ## To install super test, run
-    ```bash
+   ```bash
        npm install supertest --save-dev
+  ```
     
 
 ## Contributing
