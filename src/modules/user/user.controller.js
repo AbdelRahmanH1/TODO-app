@@ -7,7 +7,8 @@ import asyncHandler from "../../utils/asyncHandler.js";
 const createAccount = asyncHandler(async (req, res, next) => {
   const userExists = await User.findOne({ where: { email: req.body.email } });
 
-  if (userExists) return next(new Error("Email is already exists"));
+  if (userExists)
+    return next(new Error("Email is already exists", { cause: 409 }));
 
   User.create({ ...req.body });
 
@@ -27,7 +28,7 @@ const login = asyncHandler(async (req, res, next) => {
 
   await Token.create({
     token: token,
-    userAgent: req.headers["user-agent"],
+
     userId: user.id,
   });
 

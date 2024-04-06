@@ -5,11 +5,11 @@ import asyncHandler from "../../utils/asyncHandler.js";
 const createTask = asyncHandler(async (req, res, next) => {
   const userID = req.user.id;
 
-  let deadlineDate = new Date(req.body.deadline);
+  const task = await Task.findOne({ where: { title: req.body.title } });
+
+  if (task) return next(new Error("Task already exists", { cause: 400 }));
 
   await Task.create({ ...req.body, userID });
-
-  console.log(deadlineDate.getDay());
 
   return res.json({ success: true, message: "Task added successfully" });
 });

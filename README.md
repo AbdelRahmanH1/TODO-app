@@ -19,15 +19,22 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
 ## Setup
 
 1. Clone the repository:
-    ```bash
+
+   ```bash
    git clone https://github.com/AbdelRahmanH1/TODO-app.git
 
+   ```
+
 2. Install dependencies:
+
    ```bash
    cd todo-app
    npm install
 
+   ```
+
 3. Create a `.env` file in the root directory and configure environment variables:
+
    ```bash
     PORT=3000
     DATABASE_NAME=your_database_username
@@ -37,9 +44,12 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
     SALT_ROUND = number_salt
    Barrer_KEY= your_barrer_key
 
+   ```
+
 4. Run the application:
    ```bash
        npm run dev
+   ```
 5. Access the application in your web browser at `http://localhost:3000`.
 
 ## Usage
@@ -57,6 +67,19 @@ The Todo App is a simple web application built with Express.js and Sequelize ORM
 - Get a specific task: Send a `GET` request to `/v1/tasks/:id`. You need to be authenticated and authorized to access your own tasks.
 - Mark a task as completed: Send a `PATCH` request to `/api/tasks/complete/:id`. You need to be authenticated and authorized to mark your own tasks as completed.
 
+## Testing
+
+Testing is an essential part of the development process as it helps ensure the reliability and correctness of the application.
+
+### Testing Frameworks
+
+This project uses Jest as the testing framework for unit and integration tests with superTest .
+
+### To install Jest, run:
+
+         ```bash
+         npm install --save-dev jest
+
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository, create pull requests, and open issues.
@@ -65,9 +88,6 @@ Contributions are welcome! Feel free to fork the repository, create pull request
 
 This project is licensed under the MIT License.
 
+```
 
-
-
-
-
-
+```

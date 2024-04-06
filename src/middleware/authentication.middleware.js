@@ -5,7 +5,7 @@ const authentication = asyncHandler(async (req, res, next) => {
   let { token } = req.headers;
 
   if (!token || !token.startsWith(process.env.Barrer_KEY))
-    return next(new Error("Token Wrong", { cause: 400 }));
+    return next(new Error("Token Wrong", { cause: 403 }));
 
   token = token.replace(process.env.Barrer_KEY, "");
   const tokenDB = await Token.findOne({
@@ -13,7 +13,7 @@ const authentication = asyncHandler(async (req, res, next) => {
     include: [{ model: User, attributes: ["id", "username", "email"] }],
   });
 
-  if (!tokenDB) return next(new Error("Invalid Token"));
+  if (!tokenDB) return next(new Error("Invalid Token", { cause: 403 }));
   req.user = tokenDB.user.dataValues;
 
   return next();
