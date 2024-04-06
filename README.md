@@ -90,7 +90,8 @@ This project uses Jest as the testing framework for unit and integration tests w
    npm test
 ```
 ### Test Coverage
--The current test coverage of the project is 90%, ensuring that the majority of the code is adequately tested.
+The current test coverage of the project is 90%, ensuring that the majority of the code is adequately tested.
+
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository, create pull requests, and open issues.
