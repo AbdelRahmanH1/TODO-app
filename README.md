@@ -78,10 +78,11 @@ This project uses Jest as the testing framework for unit and integration tests w
 ### To install Jest, run:
 
     ```bash
-    npm install --save-dev jest
+         npm install --save-dev jest
+
 ## To install super test, run
    ```bash
-      npm install supertest --save-dev
+       npm install supertest --save-dev
     
 
 ## Contributing
