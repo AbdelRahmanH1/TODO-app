@@ -81,15 +81,16 @@ This project uses Jest as the testing framework for unit and integration tests w
      npm install jest --save-dev
  ```
 
-## To install super test, run
+### To install super test, run
    ```bash
        npm install supertest --save-dev
   ```
- ## To run the tests, use the following command:  
+ ### To run the tests, use the following command:  
   ```bash
    npm test
 ```
-
+### Test Coverage
+-The current test coverage of the project is 90%, ensuring that the majority of the code is adequately tested.
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository, create pull requests, and open issues.
